@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AI Image Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="image-generator-container">
-      <h1><span class="dalle">Dall E</span> Image Generator</h1>
+      <h1><span class="dalle">Hugging Face</span> Image Generator</h1>
 
       <div class="content">
         <input
@@ -18,38 +18,51 @@
           placeholder="Enter your prompt here..."
         />
 
-        <button class="generate-btn">Generate Image</button>
+        <button class="generate-btn">Generate Images</button>
 
-        <div class="image-container">
-          <img
-            src="images/image-placeholder.png"
-            class="generated-image"
-            alt=""
-          />
+        <div class="image-grid">
+          <div class="image-container">
+            <img src="images/image-placeholder.png" class="generated-image" alt="" />
+            <a href="images/image-placeholder.png" download="ai-image-1.png" class="download-btn">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </span>Download
+            </a>
+          </div>
+          <div class="image-container">
+            <img src="images/image-placeholder.png" class="generated-image" alt="" />
+            <a href="images/image-placeholder.png" download="ai-image-2.png" class="download-btn">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </span>Download
+            </a>
+          </div>
+          <div class="image-container">
+            <img src="images/image-placeholder.png" class="generated-image" alt="" />
+            <a href="images/image-placeholder.png" download="ai-image-3.png" class="download-btn">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </span>Download
+            </a>
+          </div>
+          <div class="image-container">
+            <img src="images/image-placeholder.png" class="generated-image" alt="" />
+            <a href="images/image-placeholder.png" download="ai-image-4.png" class="download-btn">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </span>Download
+            </a>
+          </div>
         </div>
       </div>
-
-      <a
-        href="images/image-placeholder.png"
-        download="ai-image.png"
-        class="download-btn"
-        ><span class="icon"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-            />
-          </svg> </span
-        >Download</a
-      >
     </div>
 
     <script src="main.js"></script>

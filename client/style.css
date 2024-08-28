@@ -1,41 +1,76 @@
 * {
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
   }
   
   body {
-    background: #f7f7ff;
+    background: linear-gradient(135deg, #f7f7ff 0%, #e6e9ff 100%);
     color: #0a2342;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .image-generator-container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .image-generator-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
   
   .image-generator-container h1 {
-    font-size: 28px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2b4570;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .image-generator-container h1 .dalle {
     color: #fff;
     background: #0a2342;
-    padding: 0 8px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    display: inline-block;
+    transform: rotate(-5deg);
   }
   
   .content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
   }
   
   .content .prompt-input,
   .content .generate-btn {
-    padding: 8px 24px;
-    font-size: 16px;
+    padding: 15px 25px;
+    font-size: 18px;
     border: none;
-    box-shadow: 0 4px 30px -8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .content .prompt-input {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .content .prompt-input:focus {
+    outline: none;
+    box-shadow: 0 5px 20px rgba(43, 69, 112, 0.2);
   }
   
   .content .generate-btn {
@@ -43,22 +78,57 @@
     color: #fff;
     cursor: pointer;
     font-weight: bold;
-    transition: all 400ms ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(43, 69, 112, 0.3);
   }
   
   .content .generate-btn:hover {
     background: #0a2342;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 35, 66, 0.4);
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
   }
   
   .image-container {
-    width: 400px;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   }
   
   .image-container img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  .image-caption {
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #2b4570;
+    font-weight: 500;
   }
   
   .download-btn {
@@ -67,15 +137,81 @@
     background: #0a2342;
     color: #fff;
     width: fit-content;
-    padding: 4px 16px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 13px;
+    border-radius: 50px;
+    font-size: 14px;
     text-transform: uppercase;
     align-items: center;
-    margin-top: 8px;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background: #2b4570;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 35, 66, 0.3);
   }
   
   .download-btn .icon {
     width: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .image-generator-container {
+      padding: 20px;
+    }
+  
+    .image-generator-container h1 {
+      font-size: 28px;
+    }
+  
+    .content .prompt-input,
+    .content .generate-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  
+    .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  
+    .image-container img {
+      height: 200px;
+    }
+  
+    .image-caption {
+      font-size: 14px;
+    }
+  
+    .download-btn {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-generator-container h1 {
+      font-size: 24px;
+    }
+  
+    .image-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .image-container img {
+      height: 250px;
+    }
+  }
+  
+  /* Loading animation */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  .generated-image[src="images/generating.png"] {
+    animation: pulse 1.5s infinite;
   }
