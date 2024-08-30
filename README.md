@@ -28,7 +28,11 @@ Frontend:
     No external libraries are required; it is built with vanilla JavaScript, HTML, and CSS.
 
 Backend:
+
     express: Web framework for Node.js.
+
     cors: Middleware for enabling Cross-Origin Resource Sharing.
+
     dotenv: For managing environment variables.
+    
     axios: For making HTTP requests to the Hugging Face API.
