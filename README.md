@@ -24,10 +24,10 @@ This project is a web application that allows users to generate images based on 
 
 ### Dependencies
 
-Frontend:
+- Frontend:
     No external libraries are required; it is built with vanilla JavaScript, HTML, and CSS.
 
-Backend:
+- Backend:
 
     express: Web framework for Node.js.
 
